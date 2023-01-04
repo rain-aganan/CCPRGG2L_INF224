@@ -1,1 +1,43 @@
+import java.io.*;
+import java.util.Scanner;
 
+public class NumberOne {
+    public static void main(String[] args) throws IOException, FileNotFoundException {
+        File dataFile = new File("C:\\Users\\RAIN\\Documents\\LabExer1No1\\LabExer1No1\\data.txt");
+        Scanner df = new Scanner(dataFile);
+        File sumFile = new File("sum.txt");
+        FileWriter sf = new FileWriter(sumFile , true);
+        
+        
+        try{
+            //File reading of "data.txt"
+            while(df.hasNextLine()){
+                System.out.println(df.nextLine());
+            }
+            System.out.println("");
+
+            //Creating a new file of "sum.txt"
+            if(!sumFile.exists()){
+                sumFile.createNewFile();
+                System.out.println(sumFile.getName() + " successfully created");
+                System.out.println(sumFile.getAbsolutePath());
+            }
+            else{
+                System.out.println(sumFile.getName() + " already exists.");
+                System.out.println(sumFile.getAbsolutePath());
+                
+            }
+
+            //Writing in file "sum.txt"
+            sf.write("The sum is 181");
+        }
+        catch(Exception e){
+            System.out.println("An error has occurred: "+e.getMessage());
+        }
+        finally{
+            df.close();
+            sf.flush();
+            sf.close();
+        }
+    }
+}
