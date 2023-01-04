@@ -1,7 +1,7 @@
 
 import java.io.*;
 
-public class LabExer1No2 {
+public class NumberTwo {
     public static void main(String[] args) throws IOException, FileNotFoundException{
         File dummyFile = new File("C:\\Users\\RAIN\\Documents\\LabExer1No2\\LabExer1No2\\dummy.txt");
         BufferedReader  df = new BufferedReader(new FileReader(dummyFile));
