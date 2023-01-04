@@ -1,1 +1,46 @@
+import java.io.*;
+import java.util.Scanner;
 
+public class NumberFour {
+    public static void main(String[] args) throws IOException , FileNotFoundException {
+        
+        //User's Input File Name
+        Scanner InputUserFileName = new Scanner(System.in);
+        String FileName;
+        System.out.print("Enter the file name: ");
+
+        FileName = InputUserFileName.nextLine().trim();
+        File input = new File (FileName);
+
+        //Reading the file
+        BufferedReader df = new BufferedReader(new FileReader (input));
+
+        String words;
+        int WordCount = 0;
+
+        try{
+            //counting the words in file
+            while ((words = df.readLine()) != null) {
+                String[] lineCount = words.split(" ");
+                WordCount += lineCount.length;
+                System.out.println(words);
+            }
+            
+            File dummy = new File(FileName);
+            FileWriter dw = new FileWriter(dummy, true);
+
+            //Writing the word count in the file
+            dw.write("\nWord Count: " + WordCount);
+            dw.flush();
+            dw.close();
+
+        } 
+        catch(Exception e) {
+            System.out.println("An error has occurred: " + e.getMessage());
+        } 
+        finally {
+            df.close();
+            InputUserFileName.close();
+        } 
+    }
+}
