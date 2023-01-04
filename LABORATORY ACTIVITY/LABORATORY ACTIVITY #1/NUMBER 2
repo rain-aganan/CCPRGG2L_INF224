@@ -1,1 +1,27 @@
 
+import java.io.*;
+
+public class LabExer1No2 {
+    public static void main(String[] args) throws IOException, FileNotFoundException{
+        File dummyFile = new File("C:\\Users\\RAIN\\Documents\\LabExer1No2\\LabExer1No2\\dummy.txt");
+        BufferedReader  df = new BufferedReader(new FileReader(dummyFile));
+        
+        try{
+            for (int i = 0; i < 5; i++) {
+                String lineText = df.readLine();
+                if (lineText == null) {
+                    break;
+                }
+                System.out.println(lineText);
+                }
+            
+        }
+        catch(Exception e){
+            System.out.println("There is an error reading the file: ");
+            System.out.println(e.getMessage());
+        }
+        finally{
+            df.close();
+        }
+    }
+}
