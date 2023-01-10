@@ -1,1 +1,113 @@
+import java.io.*;
+import java.util.Scanner;
 
+public class NumberFive {
+    public static void main(String[] args) throws IOException, FileNotFoundException {
+
+        //Allowing the user to enter a input and output filename
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter the input file name(dummy.txt): ");
+        String inputFileName = scan.nextLine();
+        System.out.print("Enter the output file name(any file name for reverse output): ");
+        String outputFileName = scan.nextLine();
+
+
+        //File Reading of input file name
+        File DummyFile = new File(inputFileName);
+        Scanner df = new Scanner(DummyFile);
+        File inputFile = new File(inputFileName);
+        Scanner input = new Scanner(inputFile);
+
+        //Creating output file
+        FileWriter outputFile = new FileWriter(outputFileName);
+        PrintWriter output = new PrintWriter(outputFile);
+        File ReverseFile = new File(outputFileName);
+
+        //Writing in the new file output file
+        FileWriter rf = new FileWriter(ReverseFile, true);
+        BufferedWriter br = new BufferedWriter(rf);
+
+        
+        try{
+            //File Reading of "input file name"
+            while(df.hasNextLine()){
+                System.out.println(df.nextLine());
+            }
+            System.out.println("");
+
+            if(!ReverseFile.exists()){
+                ReverseFile.createNewFile();
+                System.out.println(ReverseFile.getName() + " successfully created");
+                System.out.println(ReverseFile.getAbsolutePath());
+            }
+            else{
+                System.out.println(ReverseFile.getName() + " already exists.");
+                System.out.println(ReverseFile.getAbsolutePath());   
+            }
+
+            //Reversing the "dummy.txt"
+            String [] Reverse1 = { "Frankly" ,"," , " ", "my" ," " , "dear" , "," ," " , "I" , " " , "don't" , " " , "give" ," " , "a" , " " ,"damn" , "."};
+            String [] Reverse2 = {"I'm" , " " , "going" , " " , "to" , " " , "make" , " " , "him" , " " , "an" , " " , "offer" , " " , "he" , " " , "can't" , " " , "refuse" , "."};
+            String [] Reverse3 = {"You" , " " , "don't" , " " , "understand" , "!"};
+            String [] Reverse4 = {"Toto" , "," , " " , "I've" , " " , "got" , " " , "a" , " " , "feeling" , " " , "we're" , " " , "not" , " " , "in" , " " , "Kansas" , " " , "anymore" , "."};
+            String [] Reverse5 = {"Here's" , " " , "looking" , " " , "at" , " " , "you" , "," , "kid" , "."};
+            String [] Reverse6 = {"Go" , " " , "ahead" , "," , "make" , " " , "my" , " " , "day" , "."};
+            String [] Reverse7 = {"May" , " " , "the" , " " , "Force" , " " , "be" , " " , "with" ," " , "you" , "."};
+            String [] Reverse8 = {"What" , " " , "we've" , " " , "got" , " " , "here" , " " , "is" , " " , "failure" , " " , "to" , " " , "communicate" , "."};
+            String [] Reverse9 = {"I" , " " , "love" , " " , "the" , " " , "smell" , " " , "of" , " " , "napalm" , " " , "in" , " " , "the" , " " , "morning" , "."};
+            String [] Reverse10 = {"Love" , " " , "means" , " " , "never" , " " , "having" , " " , "to" , " " , "say" , " " , "you're" , " " , "sorry" , "."};
+
+            for (int count1 = 17; count1 >= 0; count1--) {
+                br.write(Reverse1[count1]);
+            }
+            br.newLine();
+            for (int count2 = 19; count2 >= 0; count2--) {
+                br.write(Reverse2[count2]);
+            }
+            br.newLine();
+            for (int count3 = 5; count3 >= 0; count3--) {
+                br.write(Reverse3[count3]);
+            }
+            br.newLine();
+            for (int count4 = 20; count4 >= 0; count4--) {
+                br.write(Reverse4[count4]);
+            }
+            br.newLine();
+            for (int count5 = 9; count5 >= 0; count5--) {
+                br.write(Reverse5[count5]);
+            }
+            br.newLine();
+            for (int count6 = 9; count6 >= 0; count6--) {
+                br.write(Reverse6[count6]);
+            }
+            br.newLine();
+            for (int count7 = 11; count7 >= 0; count7--) {
+                br.write(Reverse7[count7]);
+            }
+            br.newLine();
+            for (int count8 = 15; count8 >= 0; count8--) {
+                br.write(Reverse8[count8]);
+            }
+            br.newLine();
+            for (int count9 = 17; count9 >= 0; count9--) {
+                br.write(Reverse9[count9]);
+            }
+            br.newLine();
+            for (int count10 = 15; count10 >= 0; count10--) {
+                br.write(Reverse10[count10]);
+            }
+
+        }
+        catch(Exception e){
+            System.out.println("An error has occurred: "+e.getMessage());
+        }
+        finally{
+            df.close();
+            br.flush();
+            br.close();
+            scan.close();
+            input.close();
+            output.close();
+        }
+    }
+}
