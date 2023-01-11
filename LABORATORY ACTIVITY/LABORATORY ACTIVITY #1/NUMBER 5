@@ -57,44 +57,44 @@ public class NumberFive {
             String [] Reverse9 = {"I" , " " , "love" , " " , "the" , " " , "smell" , " " , "of" , " " , "napalm" , " " , "in" , " " , "the" , " " , "morning" , "."};
             String [] Reverse10 = {"Love" , " " , "means" , " " , "never" , " " , "having" , " " , "to" , " " , "say" , " " , "you're" , " " , "sorry" , "."};
 
-            for (int count1 = 17; count1 >= 0; count1--) {
-                br.write(Reverse1[count1]);
-            }
-            br.newLine();
-            for (int count2 = 19; count2 >= 0; count2--) {
-                br.write(Reverse2[count2]);
-            }
-            br.newLine();
-            for (int count3 = 5; count3 >= 0; count3--) {
-                br.write(Reverse3[count3]);
-            }
-            br.newLine();
-            for (int count4 = 20; count4 >= 0; count4--) {
-                br.write(Reverse4[count4]);
-            }
-            br.newLine();
-            for (int count5 = 9; count5 >= 0; count5--) {
-                br.write(Reverse5[count5]);
-            }
-            br.newLine();
-            for (int count6 = 9; count6 >= 0; count6--) {
-                br.write(Reverse6[count6]);
-            }
-            br.newLine();
-            for (int count7 = 11; count7 >= 0; count7--) {
-                br.write(Reverse7[count7]);
-            }
-            br.newLine();
-            for (int count8 = 15; count8 >= 0; count8--) {
-                br.write(Reverse8[count8]);
+            for (int count10 = 15; count10 >= 0; count10--) {
+                br.write(Reverse10[count10]);
             }
             br.newLine();
             for (int count9 = 17; count9 >= 0; count9--) {
                 br.write(Reverse9[count9]);
             }
             br.newLine();
-            for (int count10 = 15; count10 >= 0; count10--) {
-                br.write(Reverse10[count10]);
+            for (int count8 = 15; count8 >= 0; count8--) {
+                br.write(Reverse8[count8]);
+            }
+            br.newLine();
+            for (int count7 = 11; count7 >= 0; count7--) {
+                br.write(Reverse7[count7]);
+            }
+            br.newLine();
+            for (int count6 = 9; count6 >= 0; count6--) {
+                br.write(Reverse6[count6]);
+            }
+            br.newLine();
+            for (int count5 = 9; count5 >= 0; count5--) {
+                br.write(Reverse5[count5]);
+            }
+            br.newLine();
+            for (int count4 = 20; count4 >= 0; count4--) {
+                br.write(Reverse4[count4]);
+            }
+            br.newLine();
+            for (int count3 = 5; count3 >= 0; count3--) {
+                br.write(Reverse3[count3]);
+            }
+            br.newLine();
+            for (int count2 = 19; count2 >= 0; count2--) {
+                br.write(Reverse2[count2]);
+            }
+            br.newLine();
+            for (int count1 = 17; count1 >= 0; count1--) {
+                br.write(Reverse1[count1]);
             }
 
         }
