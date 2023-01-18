@@ -18,7 +18,7 @@ public class LabExer {
 
         File file = new File("C:\\Users\\RAIN\\Documents\\LabExer2\\LabExer2\\username.txt");
         BufferedReader br = new BufferedReader (new FileReader(file));
-        String pattern = "^[((a-z)│(\\d)│(-)│(_))]{8,24}"; //insert regex here
+        String pattern = "^[((a-z)│(\\d)│[-]│[_])]{8,24}"; //insert regex here
         String text;
         
         while((text = br.readLine()) != null){
