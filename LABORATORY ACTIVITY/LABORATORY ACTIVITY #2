@@ -71,7 +71,7 @@ public class LabExer {
         */
         File file = new File("C:\\Users\\RAIN\\Documents\\LabExer2\\LabExer2\\panda.txt");
         BufferedReader br = new BufferedReader (new FileReader(file));
-        String pattern = "(.*[?=p][?=a][?=n][?=d][?=a])"; //insert regex here
+        String pattern = "(.*[?=p][?=a][?=n][?=d][?=a].*)"; //insert regex here
         String text;
         
         while((text = br.readLine()) != null){
